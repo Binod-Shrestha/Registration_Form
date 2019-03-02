@@ -1,0 +1,155 @@
+<!-- Binod Shrestha -->
+<!-- Student_ID:991462138 -->
+<!-- Assignment#4 -->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Binod Shrestha </title>
+		<link rel="stylesheet" href="css/formcss.css">
+
+	<script>
+	function display()
+	{
+            var name = document.getElementById("t1").value + "  " +  document.getElementById("t2").value;
+            var email=   document.getElementById("t3").value;
+			var rn= renumeration_check();
+            var wexp=   document.getElementById("t4").value;
+			var rfnc=   document.getElementById("rf").value;
+			var sartdt=   document.getElementById("dt").value;
+			var commnt=   document.getElementById("cmt").value;
+		
+            var gndr= gender_check();
+            var rgn=  rgn_check();
+          
+            var result = "Name: "+ name +"\nemail: " + email + "\nWork Experience: " + wexp  + "\nStart Date: " + sartdt + "\nRenumeration: "+ rn  + "\nWorking Region: "+ rgn+"\nReference: " + rfnc +"\nGender: " + gndr +"\nComments: " + commnt ;
+           
+            document.getElementById("newtxt").value= result;
+            return false;
+                
+        }
+
+  function renumeration_check()
+	{
+           var rn=0;
+           if(document.getElementById("rn1").checked)
+               rn= document.getElementById("rn1").value;
+           else if (document.getElementById("rn2").checked)
+					rn= document.getElementById("rn2").value;
+		   else
+              rn= document.getElementById("rn3").value;
+           return rn;
+  	}
+	function gender_check()
+	{
+           var gndr=0;
+           if(document.getElementById("ml").checked)
+               gndr= document.getElementById("ml").value;
+           else
+              gndr= document.getElementById("fml").value;
+           return gndr;
+  	}
+	function rgn_check()
+	{
+           var rgn=0;
+           if(document.getElementById("rgn1").checked)
+               rgn= document.getElementById("rgn1").value;
+			
+			else if(document.getElementById("rgn2").checked)
+               rgn= document.getElementById("rgn2").value;
+			   
+			else if(document.getElementById("rgn3").checked)
+               rgn= document.getElementById("rgn3").value;
+           else
+              rgn= document.getElementById("rgn4").value;
+           return rgn;
+  	}
+	</script>
+	</head>
+<body>
+	<form>
+		<header>
+			<p id="pic">
+				<img src="images/images.jpg" alt="logo" width="175pt" height="150pt">
+			</p>
+			<div id="hd">
+			<h2>Hetauda Academy</h2> 
+				<h3>Higher Secondary School</h3>
+				<h4>Makwanpur,Nepal</h4>
+				<h5> <i>Binod Shrestha / 991462138</i> </h5>
+			</div>
+		
+		<h3 id="hdr1"> [Human Resource Contact Infomation Form] </h3>
+		</header>
+	
+	<!-- Fisrt Block -->
+	<fieldset id="fld1">
+			<legend class="lgnd"> <h3>Personal Information</h3> </legend>
+				<div>
+					First Name* <input type="text" id="t1" name="employee's first name" placeholder="Your Name" size="25" autofocus="true" required /><br><br>
+					Last Name* <input type="text" id="t2" name="employee's Last Name" placeholder="Your Last Name" size="25" required /><br><br>
+					Email* <input type="email" id="t3" placeholder="yourname@example.com" size="30"required /><br>
+				</div>
+	</fieldset>
+	
+	<!-- Second Block -->
+	<fieldset id="fld2">
+			<legend class="lgnd"><h3> Recruitment Section </h3>	</legend>
+				Work Experience <input type="number" id="t4" value="years" min="0" max="50" placeholder="year(s)" /><br></br>
+				Start Date <input type="month" id="dt" value="dd/mm/yy" />
+	</fieldset><br>
+		
+	<!-- Third Block	 -->
+	<fieldset id="fld3">
+		<div>
+			<span class="bld">Renumeration:</span><br>
+			<input type="radio" name="Renumeration" id="rn1" value="Salary" checked> Salary<br>
+			<input type="radio" name="Renumeration" id="rn2" value="Salary with Bonus"> Salary with Bonus<br>
+			<input type="radio" name="Renumeration" id="rn3" value="Commision only"> Commision only
+
+			<p>
+			<span class="bld">Working Regions:</span><br>
+			<input type="checkbox" id="rgn1" name="Working Regions" value="East" > East<br>
+			<input type="checkbox" id="rgn2" name="Working Regions" value="West"> West<br>
+			<input type="checkbox" id="rgn3" name="Working Regions" value="North"> North<br>
+			<input type="checkbox" id="rgn4" name="Working Regions" value="South"> South
+			<p>
+			
+			References:
+			0<input type="range" id="rf" min="1" max="5" value="0">5<p>
+			
+			Gender:
+			<select name="Gender" size="1" >
+			<option value="Male" id="ml" > Male </option>
+			<option value="Female" id="fml"> Female </option>
+			</select>
+		</div>
+	</fieldset><br>
+	
+	<!-- Comments/Feedback Block -->
+		<div>
+			<span class="bld">Comments/Feedback:</span><br>
+			<textarea name="employeecomments" id="cmt" rows="10" cols="50" wrap="off" placeholder=" Add your comments/feedback here..." maxlength="300"></textarea>
+		</div><br>
+		
+		Submit
+			<input type="submit" value="submit" onclick=" return display();" ><br><br>
+		
+		Reset
+			<input type="reset" value="reset"><br><br>
+			
+	<hr>
+	<footer>
+		<div id="ftr">
+			<small>&copy; All Rights Reserved 2018.</small>
+		</div>
+	</footer>
+	
+	<!-- Output Block -->
+	<tr>
+		<td> </br> Employee Details Output: </td> <td></br> <textarea id="newtxt" rows="10" cols="50"></textarea> </td>
+  </tr>
+	</form>
+
+	</body>
+</html>

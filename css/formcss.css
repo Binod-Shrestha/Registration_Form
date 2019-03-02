@@ -1,0 +1,46 @@
+body {
+	background-color: #ffffe6;
+}
+#hdr1 {
+	text-align:center;
+	color:red;
+	font-family:arial;
+}
+#id {
+	position:absolute;
+	float:none;
+}
+#hd {
+	color:blue;
+	text-align:center;
+	font-family:arial;
+	position:relative;
+	top:-125pt;
+	left:0pt
+}
+#hdr1 {
+	top:-100pt;
+	position:relative;
+	margin-bottom:-100pt;
+}
+.lgnd {
+	color:purple;
+}
+#fld1 {
+	background-color:#F0EFEF;
+}
+#fld2 {
+	background-color:#D4EAF7;
+}
+#fld3{
+	background-color:#ccffff;
+}
+#cmt  {
+	background-color:#e6ffee;
+}
+.bld {
+	font-weight:bold;
+}
+#ftr {
+	text-align:center;
+}
